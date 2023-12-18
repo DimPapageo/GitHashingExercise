@@ -1,5 +1,4 @@
 #!/bin/bash
-read -p "Enter a 4-digit integer: " unique_integer
 
 function is_valid_integer() {
     [[ $1 =~ ^[0-9]{4}$ ]]

@@ -1,5 +1,3 @@
-#!/bin/bash
-
 function is_valid_integer() {
     [[ $1 =~ ^[0-9]{4}$ ]]
 }
@@ -12,11 +10,10 @@ while true; do
     fi
 done
 
-echo -n $unique_integer | sha256sum > hash_output.txt
+echo -n $unique_integer | sha256sum >> hash_output.txt
 
-git init
 git add hash_script hash_output.txt
-git commit -m "first commit: Add hash_script and hash_output.txt"
+git commit -m "commit: Add hash_script and hash_output.txt"
 git branch -M main
-git remote add quiz-4 https://github.com/DimPapageo/GitHashingExercise.git
+git remote add quiz-4 git@github.com:DimPapageo/GitHashingExercise.git
 git push --set-upstream quiz-4 main
